@@ -13,18 +13,25 @@ body{
     background: hsl(30, 38%, 92%);
     overflow: hidden;
 }
+
 .container {
-    max-width: 45rem;
+    max-width: 42rem;
     border-radius: 15px;
     display: flex;
     align-items: center;
     margin: auto;
-    background-color: whitesmoke;
+    background-color: white;
+}
+.product-image {
+    max-width: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 .content {
     padding: 0 2rem;
     box-sizing: border-box;
-    max-width: 50% ;
+    max-width: 22rem ;
 }
 .category {
     font-family: "Montserrat", serif;
@@ -38,6 +45,10 @@ body{
     font-size: 2.5rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+}
+.product-img-mobile{
+    display: none;
 }
 .description {
     font-family: "Montserrat", sans-serif;
@@ -75,9 +86,40 @@ body{
     text-align: center;
     font-size: 0.9rem;
 }
-img {
-    max-width: 100%;
-    overflow: hidden;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+.button:hover{
+    background-color: hsl(156, 34%, 16%);
 }
+.icon-cart {
+    padding-right: 0.5rem;
+}
+@media only screen and (max-width: 768px) {
+    .body {
+        overflow-y: auto;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        max-width: 28rem;
+    }
+    .product-img-mobile{
+        display: inline;
+        max-width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    .product-image{
+        display: none;
+    }
+    .content {
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+    .price {
+        margin-top: -0.5rem;
+    }
+    .button {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        width: 24rem;
+    }
+  }
